@@ -1,6 +1,6 @@
 # ERIBench: A Comprehensive Benchmark for Embodied Reference Interaction in Human-Robot Scenarios
 
-* **ERIBench:**: the first comprehensive benchmark for Embodied Reference Interaction (ERI). It systematically evaluates the performance of MLLMs as ‘embodied brains’ across five key dimensions, covering 10 distinct tasks and 6,535 curated question-answer pairs.
+* **ERIBench:** the first comprehensive benchmark for Embodied Reference Interaction (ERI). It systematically evaluates the performance of MLLMs as ‘embodied brains’ across five key dimensions, covering 10 distinct tasks and 6,535 curated question-answer pairs.
 
 ## Dataset
 
