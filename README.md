@@ -1,36 +1,26 @@
----
-license: cc-by-4.0
-task_categories:
-  - visual-question-answering
-  - object-detection
-language:
-  - en
-size_categories:
-  - 10K<n<100K
-tags:
-  - embodied-ai
-  - robotics
-  - human-robot-interaction
-  - safety
-  - multimodal
-viewer: false
----
-
 # ERIBench: Embodied Robot Interaction Benchmark
 
 ERIBench is a multimodal benchmark for evaluating vision-language models in embodied human-robot interaction scenarios. Each sample presents a first-person robot perspective image where a human user points at a target object, paired with task instructions that test various capabilities.
 
-## Dataset Structure
+## Overview
+
+Modern vision-language models (VLMs) are increasingly deployed in embodied robotics settings. ERIBench provides a comprehensive evaluation suite covering 10 distinct tasks that assess a model's ability to understand human-robot interaction scenes, including safety awareness, spatial reasoning, visual grounding, and task planning.
+
+## Dataset
+
+The full dataset is hosted on Hugging Face: [ghy1/ERIBench](https://huggingface.co/datasets/ghy1/ERIBench)
+
+### Structure
 
 ```
 ERIBench/
 ├── train/
-│   ├── images/           
+│   ├── images/            
 │   ├── safety_boundary.json
 │   ├── spatial_relationship.json
 │   └── visual_grounding.json
 └── test/
-    ├── images/            
+    ├── images/           
     ├── intent_inference.json
     ├── object_color.json
     ├── object_function.json
@@ -43,7 +33,7 @@ ERIBench/
     └── visual_grounding.json
 ```
 
-## Tasks
+### Tasks
 
 | Task | Train | Test | Description |
 |------|-------|------|-------------|
@@ -58,9 +48,9 @@ ERIBench/
 | Object Shape | — | 573 | Identify the shape of the pointed object |
 | Task Planning | — | 573 | Generate step-by-step plans for task execution |
 
-## Data Format
+### Data Format
 
-Each JSON file contains a list of samples with the following fields:
+Each JSON file contains a list of samples:
 
 ```json
 {
@@ -79,7 +69,9 @@ For visual grounding, additional fields are included:
 }
 ```
 
-## Usage
+## Quick Start
+
+### Download from Hugging Face
 
 ```python
 from datasets import load_dataset
@@ -87,13 +79,12 @@ from datasets import load_dataset
 dataset = load_dataset("ghy1/ERIBench")
 ```
 
-<!-- ## Citation
+### Evaluation
 
-If you use ERIBench in your research, please cite:
+```python
 
-```bibtex
-@misc{eribench2025,
-  title={ERIBench},
-  year={2025}
-}
-``` -->
+```
+
+## License
+
+This dataset is released under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
