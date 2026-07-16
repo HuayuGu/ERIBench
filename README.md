@@ -1,16 +1,12 @@
-# ERIBench: Embodied Robot Interaction Benchmark
+# ERIBench: A Comprehensive Benchmark for Embodied Reference Interaction in Human-Robot Scenarios
 
-ERIBench is a multimodal benchmark for evaluating vision-language models in embodied human-robot interaction scenarios. Each sample presents a first-person robot perspective image where a human user points at a target object, paired with task instructions that test various capabilities.
-
-## Overview
-
-Modern vision-language models (VLMs) are increasingly deployed in embodied robotics settings. ERIBench provides a comprehensive evaluation suite covering 10 distinct tasks that assess a model's ability to understand human-robot interaction scenes, including safety awareness, spatial reasoning, visual grounding, and task planning.
+* **ERIBench:**: the first comprehensive benchmark for Embodied Reference Interaction (ERI). It systematically evaluates the performance of MLLMs as ‘embodied brains’ across five key dimensions, covering 10 distinct tasks and 6,535 curated question-answer pairs.
 
 ## Dataset
 
-The full dataset is hosted on Hugging Face: [ghy1/ERIBench](https://huggingface.co/datasets/ghy1/ERIBench)
+The full dataset is hosted on [huggingface](https://huggingface.co/datasets/ghy1/ERIBench)
 
-### Structure
+<!-- ### Structure
 
 ```
 ERIBench/
@@ -63,11 +59,11 @@ Each JSON file contains a list of samples:
 For visual grounding, additional fields are included:
 
 ```json
-{
+{ 
   "bbox": [x_min, y_min, x_max, y_max],
   "label": "object label"
 }
-```
+``` -->
 
 ## Quick Start
 
