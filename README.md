@@ -69,16 +69,42 @@ For visual grounding, additional fields are included:
 
 ### Download from Hugging Face
 
-```python
+<!-- ```python
 from datasets import load_dataset
 
 dataset = load_dataset("ghy1/ERIBench")
+``` -->
+
+<!-- export HF_ENDPOINT=https://hf-mirror.com -->
+```bash
+hf download --repo-type dataset ghy1/ERIBench --local-dir ./dataset
 ```
 
 ### Evaluation
 
-```python
+```bash
+# Example evaluate Qwen3-VL-2B-Instruct
+# inference
+python inference.py \
+    --model_type qwenvl \
+    --model_name Qwen/Qwen3-VL-2B-Instruct \
+    --testset_dir ./dataset/test \
+    --image_dir ./dataset/test/images  \
+    --output_dir ./predictions/Qwen3-VL-2B-Instruct \
+    --temperature 0.0 \
+    --max_tokens 4096 \
+    --batch_size 8
 
+# evaluate metrics
+API_KEY=""
+python evaluate_metrics.py \
+    --predictions_path ./predictions/Qwen3-VL-2B-Instruct/ \
+    --output_dir ./results/Qwen3-VL-2B-Instruct/ \
+    --model_name Qwen/Qwen3-VL-2B-Instruct \
+    --image_dir ./dataset/test/images \
+    --api_key $API_KEY \
+    --base_url "https://ark.cn-beijing.volces.com/api/v3" \
+    --score_model doubao-seed-1-8-251228
 ```
 
 ## License
