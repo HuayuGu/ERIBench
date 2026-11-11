@@ -114,3 +114,18 @@ python evaluate_metrics.py \
 ## License
 
 This dataset is released under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
+
+## Citation
+
+If this work is helpful, please kindly cite as:
+
+```bash
+@misc{gu2026eribench,
+  title={{ERIBench}: A Comprehensive Benchmark for Embodied Reference Interaction in Human-Robot Scenarios},
+  author={Gu, Huayu and Xia, Menghan and Huang, Shaoli and Xuan, Wenjie and Liu, Juhua and Du, Bo},
+  year={2026},
+  howpublished= {GitHub repository},
+  url= {https://github.com/HuayuGu/ERIBench}
+}
+```
+
