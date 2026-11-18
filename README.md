@@ -4,7 +4,7 @@
 
 ## Paper
 
-Read the paper: [ERIBench: A Comprehensive Benchmark for Embodied Reference Interaction in Human-Robot Scenarios](./Arxiv_ERIBench.pdf).
+Read the paper: [ERIBench: A Comprehensive Benchmark for Embodied Reference Interaction in Human-Robot Scenarios](./ERIBench.pdf).
 
 ## Dataset
 
